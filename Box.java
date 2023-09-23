@@ -112,7 +112,7 @@ public class Box{
 
     }
 
-    private void clearSausage(int a, int b){
+    private void ClearSausage(int a, int b){
         //sausageArray[a][b] = new Sausage(); 
     }
 
