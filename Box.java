@@ -32,7 +32,7 @@ public class Box{
     }
 
     public Box(){
-        for (int a = 0; a < 50; a++){
+        for (int a = 0; a < 24; a++){
             sausageArray[a] = new Sausage();
         }
     }
