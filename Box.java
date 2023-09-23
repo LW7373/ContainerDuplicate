@@ -10,7 +10,7 @@ package dongwangxu.seven;
 import dongwangxu.seven.MeatTypeEnum.MeatType;
 import dongwangxu.seven.Sausage;
 
-public class Box{
+public class PackBox{
 
     // Class fields
     private String material;
