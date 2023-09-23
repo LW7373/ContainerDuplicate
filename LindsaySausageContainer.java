@@ -10,7 +10,7 @@ package dongwangxu.seven;
 import dongwangxu.seven.MeatTypeEnum.MeatType;
 import dongwangxu.seven.Sausage;
 
-public class Package {
+public class Box{
 
     // Class fields
     private String material;
@@ -21,7 +21,7 @@ public class Package {
     private boolean isShipped;
     private Sausage[] sausageArray;
 
-    public Package(String material, double length, double width, double height, int numSausageLinks, boolean isShipped, Sausage[] sausageArray) {
+    public Box(String material, double length, double width, double height, int numSausageLinks, boolean isShipped, Sausage[] sausageArray) {
         this.material = material;
         this.length = length;
         this.width = width;
