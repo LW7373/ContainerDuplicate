@@ -14,8 +14,6 @@ public class Sausage {
     // Class fields
     private String productName;  
     private MeatType MeatType;
-    private double productionCost;
-    private int numSausages;
     private double sausageLength;
     private int leanMeatPercentage;
     private int fatPercentage;
@@ -26,7 +24,6 @@ public class Sausage {
         this.productName = "Classic Beef Sausage";
         this.MeatType = MeatType.beef;
         this.productionCost = 2.00;
-        this.numSausages = 8;
         this.sausageLength = 4.0;
         this.leanMeatPercentage = 30;
         this.fatPercentage = 70;
@@ -38,7 +35,6 @@ public class Sausage {
         this.productName = "Mega Meat Mash";
         this.MeatType = MeatType.mystery;
         this.productionCost = 3.60;
-        this.numSausages = 8;
         this.sausageLength = 12.0;
         this.leanMeatPercentage = 25;
         this.fatPercentage = 75;
@@ -51,7 +47,6 @@ public class Sausage {
         this.MeatType = MeatType.chicken;
         this.productionCost = 3.10;
         this.sellingPrice = 7.49;
-        this.numSausages = 16;
         this.sausageLength = 3.0;
         this.leanMeatPercentage = 90;
         this.fatPercentage = 10;
