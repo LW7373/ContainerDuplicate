@@ -21,7 +21,7 @@ public class PackBox{
     private boolean isShipped;
     private Sausage[] sausageArray;
 
-    public Box(String material, double length, double width, double height, int numSausageLinks, boolean isShipped, Sausage[] sausageArray) {
+    public PackBox(String material, double length, double width, double height, int numSausageLinks, boolean isShipped, Sausage[] sausageArray) {
         this.material = material;
         this.length = length;
         this.width = width;
@@ -31,11 +31,11 @@ public class PackBox{
         this.sausageArray = sausageArray;
     }
 
-    public Box(){
-        for (int a = 0; a < 24; a++){
-            sausageArray[a] = new Sausage();
-        }
-    }
+    //public Box(){
+    //    for (int a = 0; a < 24; a++){
+    //        sausageArray[a] = new Sausage();
+    //    }
+    //}
 
 
 
@@ -94,33 +94,61 @@ public class PackBox{
         this.isShipped = isShipped;
     }
 
-
-
-
-
-    // CRUD
-    private void AddSausage(int endingIndex, Sausage newSausage){
-
-    }
-
-    private Sausage ReturnSausage (int a, int b){
-        //return sausageArray[a][b];
-        return new Sausage();
-    }
-
-    private void ChangeSausage(int a, int b, Sausage newSausage){
-
-    }
-
-    private void ClearSausage(int a, int b){
-        //sausageArray[a][b] = new Sausage(); 
-    }
-
     public Sausage[] getSausageArray(){
         return this.sausageArray;
     }
 
     public void setSausageArray(Sausage[] sausageArray){
         this.sausageArray = sausageArray;
+    }
+
+
+    // verify input for arrayIndex and data type of sausageArray
+
+    
+    // CRUD
+    private void AddSausage(Sausage newSausage){        
+        int arrayLen =  this.sausageArray.length;
+        Sausage[] sausageArrayNew = new Sausage(arrayLen + 1);
+        System.arraycopy(sausageArray, 0, sausageArrayNew, 0, arrayLen);
+        sausageArrayNew[arrayLen + 1] = newSausage; 
+        this.setSausageArray(sausageArrayNew);
+        for (int i = 0; i < arrayLen + 1){
+           system.print(sausageArray[i]);
+        }
+    }
+
+    private Sausage ReturnSausage (){
+        // return sausageArray[a][b];
+        // return new Sausage();
+        int arrayLen = this.sausageArray.length;
+        for (int i = 0; i < arrayLen + 1){
+           system.print(sausageArray[i]);
+        }
+    }
+
+    private void ChangeSausage(int arrayIndex, Sausage newSausage){
+        this.sausageArray[arrayIndex] = newSausage;
+        this.setSausageArray(sausageArray);
+        for (int i = 0; i < sausageArray.length){
+            system.print(sausageArray[i]);
+        }
+    }
+
+    private void DeleteSausage(int arrayIndex){
+        //sausageArray[a][b] = new Sausage(); 
+        int arrayLen =  this.sausageArray.length;
+        Sausage[] sausageArrayNew = new Sausage(arrayLen - 1);        
+        int j = arrayIndex;
+        for(int i= 0, k = 0; i< arrayLen; i++){
+            if(i != j){
+                sausageArrayNew[k] = this.sausageArray[i];
+                k++;
+            }
+        }
+        this.setSausageArray(sausageArrayNew);
+        for (int i = 0; i < arrayLen + 1){
+            system.print(sausageArray[i]);
+        }
     }
 }
