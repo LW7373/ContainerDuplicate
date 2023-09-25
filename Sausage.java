@@ -3,19 +3,20 @@ Moses Dong, Nicholas Xu, and Lindsay Wang
 Schenk
 AP CSA - Period 7
 Glizzy Goblin - Sausage Class
-19 September 2023
+25 September 2023
 */
 
 package dongwangxu.seven;
 import dongwangxu.seven.MeatTypeEnum.MeatType;
 
-public class Sausage {
+public class Sausage{
 
     // Class fields
     private String productName;  
     private MeatType MeatType;
+    private double productionCost;
+    private double sellingPrice;
     private double sausageLength;
-    private int leanMeatPercentage;
     private int fatPercentage;
     private boolean isCooked;
 
@@ -25,7 +26,6 @@ public class Sausage {
         this.MeatType = MeatType.beef;
         this.productionCost = 2.00;
         this.sausageLength = 4.0;
-        this.leanMeatPercentage = 30;
         this.fatPercentage = 70;
         this.isCooked = false;
     }
@@ -36,29 +36,26 @@ public class Sausage {
         this.MeatType = MeatType.mystery;
         this.productionCost = 3.60;
         this.sausageLength = 12.0;
-        this.leanMeatPercentage = 25;
         this.fatPercentage = 75;
         this.isCooked = false;
     }
 
     // Partial constructor 2 - Nicholas
-    public Sausage(String productName, MeatType meatType, double sausageLength, int leanMeatPercentage, int fatPercentage){
+    public Sausage(String productName, MeatType meatType, double sausageLength, int fatPercentage){
         this.productName = "Diet Glizzy";
         this.MeatType = MeatType.chicken;
         this.productionCost = 3.10;
         this.sellingPrice = 7.49;
         this.sausageLength = 3.0;
-        this.leanMeatPercentage = 90;
         this.fatPercentage = 10;
         this.isCooked = false;
     }
 
     // Partial Constructor 3 - Moses (Nutrition)
-    public Sausage(String productName, MeatType meatType, double sausageLength, int leanMeatPercentage, int fatPercentage, boolean isCooked){
+    public Sausage(String productName, MeatType meatType, double sausageLength, int fatPercentage, boolean isCooked){
         this.productName = productName;
         this.MeatType = meatType;
         this.sausageLength = sausageLength;
-        this.leanMeatPercentage = leanMeatPercentage;
         this.fatPercentage = fatPercentage;
         this.isCooked = isCooked;
         this.productionCost = 2.00;
@@ -72,19 +69,17 @@ public class Sausage {
         this.productionCost = productionCost;
         this.sellingPrice = sellingPrice;
         this.sausageLength = 3.0;
-        this.leanMeatPercentage = 90;
         this.fatPercentage = 10;
         this.isCooked = true;
     }
 
     // Full constructor - Lindsay
-    public Sausage(String productName, MeatType meatType, double productionCost, double sellingPrice, double sausageLength, int leanMeatPercentage, int fatPercentage, boolean isCooked){
+    public Sausage(String productName, MeatType meatType, double productionCost, double sellingPrice, double sausageLength, int fatPercentage, boolean isCooked){
         this.productName = productName;
         this.MeatType = meatType;
         this.productionCost = productionCost;
         this.sellingPrice = sellingPrice;
         this.sausageLength = sausageLength;
-        this.leanMeatPercentage = leanMeatPercentage;
         this.fatPercentage = fatPercentage;
         this.isCooked = isCooked;
     }
@@ -140,16 +135,6 @@ public class Sausage {
         this.sausageLength = sausageLength;
     }
 
-    public int getLeanMeatPercentage(){
-        // User validation goes here
-        return this.getLeanMeatPercentage();
-    }
-
-    public void setLeanMeatPercentage(int leanMeatPercentage){
-        // User validation goes here
-        this.leanMeatPercentage = leanMeatPercentage;
-    }
-
     public int getFatPercentage(){
         // User validation goes here
         return this.getFatPercentage();
@@ -179,7 +164,6 @@ public class Sausage {
         s += "Production Cost: " + this.productionCost + "\n";
         s += "Selling Price: " + this.sellingPrice + "\n";
         s += "Sausage Length (inches): " + this.sausageLength + "\n";
-        s += "Lean Meat Percentage: " + this.leanMeatPercentage + "\n";
         s += "Fat Percentage: " + this.fatPercentage + "\n";
         s += "Cooked? " + this.isCooked + "\n";
 
